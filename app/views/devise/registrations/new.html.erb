@@ -1,7 +1,7 @@
 <div class="container">
 <div class="row">
   <div class="col-md-4 col-md-offset-4">
-<div class="well">
+<div class="well" id="well">
 
 <h2>Sign up</h2>
 
@@ -27,13 +27,13 @@
   </div>
 
   <div class="actions">
-    <%= f.submit "Sign up", class: 'btn btn-secondary', id: 'sign_up_button' %>
+    <%= f.submit "Sign up", class: 'btn btn-primary', id: 'sign_up_button' %>
   </div>
 <% end %>
 
 <%= link_to "Already have an account?", new_user_session_path, id: 'sign_in_already' %>
 
-<%= render "devise/shared/links" %>
+
 
 
 </div>
