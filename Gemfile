@@ -37,6 +37,7 @@ gem 'bootstrap-sass', '3.3.7'
 gem 'font-awesome-sass', '4.6.2'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 gem 'hirb'
+gem 'devise'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
