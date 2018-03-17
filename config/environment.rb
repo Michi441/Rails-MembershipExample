@@ -9,10 +9,10 @@ Rails.application.initialize!
 
 
 ActionMailer::Base.smtp_settings = {
-  :port           => ENV['MAILGUN_SMTP_PORT'],
-  :address        => ENV['MAILGUN_SMTP_SERVER'],
-  :user_name      => ENV['MAILGUN_SMTP_LOGIN'],
-  :password       => ENV['MAILGUN_SMTP_PASSWORD'],
+  :port           => ENV['25'],
+  :address        => ENV['smtp.mailgun.org'],
+  :user_name      => ENV['postmaster@sandbox4da2a91014c44e5d98bff970fa7a4f2f.mailgun.org'],
+  :password       => ENV['e3ea952f3348d5ca5159f25469e3e895-833f99c3-ad7431dd'],
   :domain         => 'glacial-lake-54827.herokuapp.com',
   :authentication => :plain,
 }
