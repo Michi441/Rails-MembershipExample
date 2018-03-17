@@ -3,7 +3,7 @@ class ContactMailer < ActionMailer::Base
 
 
 
-  default to: 'instructor@upskillcourse.com'
+  default to: 'mdxScream@web.de'
 
   def contact_mailer(name, email, body)
 
