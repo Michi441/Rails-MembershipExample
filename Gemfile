@@ -38,6 +38,8 @@ gem 'font-awesome-sass', '4.6.2'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 gem 'hirb'
 gem 'devise'
+gem 'stripe', '1.48.0'
+gem 'figaro', '1.1.1'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
