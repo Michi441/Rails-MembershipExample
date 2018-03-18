@@ -17,14 +17,14 @@
         <h4>Sign up for free and get basic access!</h4>
         <br>
 
-        <%= link_to "Sign Up", "#", class: 'btn btn-primary btn-lg btn-block' %>
+        <%= link_to "Sign Up", new_user_registration_path(plan: @basic_plan.id), class: 'btn btn-primary btn-lg btn-block' %>
       </div>
     </div>
     <div class="col-md-6">
       <div class="well">
         <h2 class="text-center">Paid Membership</h2>
         <br>
-        <%= link_to "Sign Up", "#", class: 'btn btn-primary btn-lg btn-block' %>
+        <%= link_to "Sign Up", new_user_registration_path(plan: @pro_plan.id), class: 'btn btn-primary btn-lg btn-block' %>
       </div>
     </div>
   </div>
