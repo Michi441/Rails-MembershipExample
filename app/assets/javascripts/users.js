@@ -5,7 +5,7 @@ $(document).on('turbolinks:load', function(){
   var Form = $('#pro_form');
 
   // GET THE SUBMIT BUTTON IN THE _PRO_FORM.HTMl.ERB
-  var SubmitBtn = $('#form-submit-btn');
+  var SubmitBtn = $('#sign_up_button');
 
   // SETUP THE STRIPE API KEY
   Stripe.setPublishableKey($('meta[name="stripe-key"]').attr('content'));
@@ -13,10 +13,11 @@ $(document).on('turbolinks:load', function(){
   // IF THE BUTTON GETS CLICKED
   SubmitBtn.click(function(event){
 
+    console.log("clicked");
     // MAKE SURE ITS NOT EMPTY
     event.preventDefault();
 
-    submitBtn.val('Processing').prop('disabled', true);
+    SubmitBtn.val('Processing').prop('disabled', true);
 
     // ASSIGN VARIABLES TO THE DATA INSIDE THE FIELDS
     var ccNum = $('#card_number').val(),
@@ -49,7 +50,7 @@ $(document).on('turbolinks:load', function(){
 
     if(error){
 
-      submitBtn.prop('disabled', false).val('Sign Up');
+      SubmitBtn.prop('disabled', false).val('Sign Up');
       // if there are errors, don't send it to stripe
     } else {
       // IF NOT, CREATE A TOKEN BASED ON THE VALUES OF THE VARIABLES.
@@ -61,7 +62,7 @@ $(document).on('turbolinks:load', function(){
       }, stripeResponseHandler)
 
     }
-
+    return false;
 
 
 
