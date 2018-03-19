@@ -225,7 +225,7 @@ DEPENDENCIES
   capybara (~> 2.13)
   coffee-rails (~> 4.2)
   devise
-  figaro (= 1.1.1)
+  figaro
   font-awesome-sass (= 4.6.2)
   hirb
   jbuilder (~> 2.5)
