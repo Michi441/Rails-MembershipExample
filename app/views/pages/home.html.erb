@@ -11,6 +11,32 @@
 
 <div class="container">
   <div class="row">
+    <% if user_signed_in? %>
+      <div class="col-md-6">
+        <div class="well">
+          <h2 class="text-center">
+            Your Profile
+          </h2>
+          <% if current_user.profile %>
+            <%= link_to "Edit your Profile", edit_user_profile_path(current_user), class: 'btn btn-default btn-lg btn-block' %>
+            <%= link_to "View your Profile", user_path(id: current_user.id), class: 'btn btn-default btn-lg btn-block' %>
+          <% else %>
+            <%= link_to "Create your Profile", new_user_profile_path(current_user) %>
+          <% end %>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="well">
+          <h2 class="text-center">
+            The Community
+          </h2>
+          <p>Visit the community to check out other members!</p>
+          <%= link_to "Visit Community", "#", class: 'btn btn-default btn-lg btn-block' %>
+        </div>
+      </div>
+
+    <% else %>
     <div class="col-md-6">
       <div class="well">
         <h2 class="text-center">Basic Membership</h2>
@@ -20,6 +46,7 @@
         <%= link_to "Sign Up", new_user_registration_path(plan: @basic_plan.id), class: 'btn btn-primary btn-lg btn-block' %>
       </div>
     </div>
+
     <div class="col-md-6">
       <div class="well">
         <h2 class="text-center">Paid Membership</h2>
@@ -27,5 +54,10 @@
         <%= link_to "Sign Up", new_user_registration_path(plan: @pro_plan.id), class: 'btn btn-primary btn-lg btn-block' %>
       </div>
     </div>
+    <%= link_to "Create Profile", new_user_profile_path(current_user) if user_signed_in? %>
+
+    <% end %>
+
+
   </div>
 </div>

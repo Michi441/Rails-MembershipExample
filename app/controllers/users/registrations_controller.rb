@@ -21,6 +21,11 @@ class Users::RegistrationsController < Devise::RegistrationsController
     end
   end
 
+  def delete
+    @subscription = Stripe.Subscription.retrieve('')
+    @subscription.delete
+  end
+
 
   private
     def select_plan
