@@ -15,6 +15,7 @@
         <h1>  <%= @user.profile.username %></h1>
         <h3> <%= @user.profile.description %></h3>
         <%= @user.profile.favourite_technologie %>
+        <%= @subscription.subscriptions %>
       </div>
         <div class="well">
           <% if current_user.plan_id == 2 %>
